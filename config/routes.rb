@@ -1,5 +1,7 @@
 CotobuBeta::Application.routes.draw do
   
+  devise_for :admins, :controllers => { :omniauth_callbacks => "admins/omniauth_callbacks" }
+
   resources :places
 
   # The priority is based upon order of creation:

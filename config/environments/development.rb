@@ -35,6 +35,8 @@ CotobuBeta::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
 
-    #paperclip
+  #paperclip
   Paperclip.options[:command_path] = "/c/Program Files (x86)/ImageMagick-6.7.7-Q16/"
+  # devise default url
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 end
