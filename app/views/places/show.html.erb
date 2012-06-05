@@ -1,6 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+<%= image_tag @place.avatar.url(:small) %>
+</p>
+
+<p>
   <b>Name:</b>
   <%= @place.name %>
 </p>

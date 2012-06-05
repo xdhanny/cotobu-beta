@@ -1,0 +1,12 @@
+<li class="span3">
+    <div class="thumbnail" style="background-color: #dddddd">
+    	<% if place.avatar? %>
+	    	<img src="<%= place.avatar.url(:small) %>">
+	    <% end %><b>
+
+		<h3><%= place.name %></h3>
+		<p><%= place.description %></p>
+
+		<div class="btn"><%= link_to 'Have a look!', place %></div>
+	</div>
+  </li>

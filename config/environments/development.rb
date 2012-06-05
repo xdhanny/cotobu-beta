@@ -34,4 +34,7 @@ CotobuBeta::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+    #paperclip
+  Paperclip.options[:command_path] = "/c/Program Files (x86)/ImageMagick-6.7.7-Q16/"
 end

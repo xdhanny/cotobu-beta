@@ -14,8 +14,11 @@ gem 'formtastic-bootstrap'
 gem 'tabulous'
 
 # linux javascript
-gem 'execjs'
-gem 'therubyracer'
+case RUBY_PLATFORM
+	when /linux/
+       gem 'execjs'
+       gem 'therubyracer'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -41,6 +44,9 @@ group :development do
 end
 
 gem 'jquery-rails'
+
+#gem paperclip -- images
+gem 'paperclip'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
