@@ -10,6 +10,8 @@ gem 'rails', '3.2.0'
 # tab navigation
 gem 'tabulous'
 
+gem 'formtastic-bootstrap'
+
 # linux javascript
 case RUBY_PLATFORM
 	when /linux/
@@ -30,10 +32,10 @@ group :assets do
   gem "omniauth-facebook"
 
   # linux javascript
-  gem 'execjs'
+  #gem 'execjs'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  gem 'therubyracer'
+  #gem 'therubyracer'
 
   gem 'uglifier', '>= 1.0.3'
 end
