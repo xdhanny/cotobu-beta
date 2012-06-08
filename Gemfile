@@ -10,7 +10,7 @@ gem 'rails', '3.2.0'
 # tab navigation
 gem 'tabulous'
 
-gem 'formtastic-bootstrap'
+#gem 'formtastic-bootstrap'
 
 # linux javascript
 case RUBY_PLATFORM

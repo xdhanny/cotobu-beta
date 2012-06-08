@@ -6,7 +6,7 @@
 
 <body>
 
-<div class="container">
+<div class="container-fluid">
 
 	<div class="row">
 		<div class="span8">	
@@ -20,36 +20,21 @@
 			  </p>
 			</div>
 		</div>
-		<!--
 		<div class="span2 offset1">	
-			<ul class="thumbnails">
-			  	<li class="span12">
-			   		<img src="http://1.bp.blogspot.com/_3XvQyYFyC88/SXeDCmphLYI/AAAAAAAAALE/4msbdfGCY9E/s1600/mapa+africa+negra+jpg.png" alt="">
-			 	</li>			  
-			</ul>
-		</div>
-		-->
-		<div class="span2 offset1">	
-			<div class="row">
 				<ul class="thumbnails">
-			  		<li class="span12">
-			   		<%= image_tag("africa.png", :alt => "Africa") %>
-			 		</li>			  
-				</ul>
-			</div>
-			<div class="row">
-				<div class="span2 offset2">
-					<div class="btn btn-inverse btn-large">
-						<div style="color:white;">
-							<%= link_to 'Create your Resort', new_place_path %>
-						</div>
-					</div>
-				</div>
-			</div>
+			  		<li>
+			   			<%= image_tag("africa.png", :alt => "Africa") %>
+			 		</li>
+			 	</ul>	  
 		</div>
 	</div>
+	<div class="row">
+		<div class="offset10">
+			<%= link_to 'Create your Resort', new_place_path, :class => 'btn btn-primary' %>
+		</div>		
+	</div>
 	<hr>
-
+    
 	<footer> 
         <p>&copy; Ideas Brillantes 2012</p> 
       </footer> 

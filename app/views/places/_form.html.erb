@@ -1,13 +1,28 @@
-<%= semantic_form_for @place, :html => { :multipart => true } do |f| %>
-  <%= f.semantic_errors %>
-  <%= f.inputs do %>
-    <%= f.input :name,   :hint => "Enter the place's name" %>
-    <%= f.input :description, :hint => "Enter a brief description for this place" %>
-    <%= f.input :avatar %>
-  <% end %>
 
-
-  <%= f.buttons do %>
-    <%= f.commit_button :button_html => {:class => "primary"} %>
+<%= form_for @place, :html => { :multipart => true} do |f| %>
+  <% if @place.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@place.errors.count, "error") %> prohibited this place from being saved:</h2>
+      <ul>
+      <% @place.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
   <% end %>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :avatar %><br />
+    <%= f.file_field :avatar %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Save" %>
+  </div>
 <% end %>
